@@ -287,15 +287,15 @@ function Index() {
             </div>
             <div className="grid gap-4 sm:grid-cols-2">
               {[
-                [UsersRound, "Formateurs experts", "Des professionnels qui partagent leur expérience du terrain."],
-                [Award, "Certificat reconnu", "Une validation claire des compétences acquises."],
-                [ChefHat, "Apprentissage concret", "Ateliers, projets et mises en situation dès le départ."],
-                [BriefcaseBusiness, "Accompagnement emploi", "Conseils, posture professionnelle et préparation à l'insertion."],
-              ].map(([Icon, title, copy]) => (
-                <article key={String(title)} className="rounded-2xl border border-primary-foreground/15 bg-primary-foreground/8 p-6">
+                { icon: UsersRound, title: "Formateurs experts", copy: "Des professionnels qui partagent leur expérience du terrain." },
+                { icon: Award, title: "Certificat reconnu", copy: "Une validation claire des compétences acquises." },
+                { icon: ChefHat, title: "Apprentissage concret", copy: "Ateliers, projets et mises en situation dès le départ." },
+                { icon: BriefcaseBusiness, title: "Accompagnement emploi", copy: "Conseils, posture professionnelle et préparation à l'insertion." },
+              ].map(({ icon: Icon, title, copy }) => (
+                <article key={title} className="rounded-2xl border border-primary-foreground/15 bg-primary-foreground/8 p-6">
                   <Icon className="size-7 text-secondary" />
-                  <h3 className="mt-5 font-display text-lg font-bold">{String(title)}</h3>
-                  <p className="mt-2 text-sm leading-6 text-primary-foreground/70">{String(copy)}</p>
+                  <h3 className="mt-5 font-display text-lg font-bold">{title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-primary-foreground/70">{copy}</p>
                 </article>
               ))}
             </div>
