@@ -146,7 +146,7 @@ function Index() {
     ]
       .filter(Boolean)
       .join("\n");
-    window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank", "noopener,noreferrer");
+    window.open(`https://wa.me/225074944333?text=${encodeURIComponent(text)}`, "_blank", "noopener,noreferrer");
   };
 
   return (
