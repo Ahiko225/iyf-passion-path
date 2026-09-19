@@ -29,6 +29,7 @@ import heroAsset from "@/assets/iyf-hero.jpg.asset.json";
 import informatiqueAsset from "@/assets/iyf-informatique.jpg.asset.json";
 import patisserieAsset from "@/assets/iyf-patisserie.jpg.asset.json";
 import languesAsset from "@/assets/iyf-langues.jpg.asset.json";
+import raccourcisWindowsAsset from "@/assets/raccourcis-windows.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -306,19 +307,23 @@ function Index() {
       <section id="galerie" className="scroll-mt-20 py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <SectionHeading eyebrow="La formation en action" title="Au cœur de nos ateliers" copy="Des espaces où l'on expérimente, échange et progresse ensemble." />
-          <div className="grid gap-4 md:grid-cols-12 md:grid-rows-2">
-            <figure className="gallery-item md:col-span-7 md:row-span-2">
-              <img src={informatiqueAsset.url} alt="Atelier informatique avec un formateur" loading="lazy" width={1408} height={1056} />
+           <div className="grid gap-4 md:grid-cols-12 md:grid-rows-2">
+             <figure className="gallery-item md:col-span-6 md:row-span-2">
+               <img src={informatiqueAsset.url} alt="Atelier informatique avec un formateur" loading="eager" width={1408} height={1056} />
               <figcaption>Informatique <span>Créer avec le numérique</span></figcaption>
             </figure>
-            <figure className="gallery-item md:col-span-5">
-              <img src={patisserieAsset.url} alt="Étudiantes en atelier de pâtisserie" loading="lazy" width={1408} height={1056} />
+             <figure className="gallery-item md:col-span-3">
+               <img src={patisserieAsset.url} alt="Étudiantes en atelier de pâtisserie" loading="eager" width={1408} height={1056} />
               <figcaption>Pâtisserie <span>Maîtriser les bons gestes</span></figcaption>
             </figure>
-            <figure className="gallery-item md:col-span-5">
-              <img src={languesAsset.url} alt="Cours de coréen interactif" loading="lazy" width={1408} height={1056} />
+             <figure className="gallery-item md:col-span-3">
+               <img src={languesAsset.url} alt="Cours de coréen interactif" loading="eager" width={1408} height={1056} />
               <figcaption>Coréen <span>S'ouvrir au monde</span></figcaption>
             </figure>
+             <figure className="gallery-item md:col-span-6">
+               <img src={raccourcisWindowsAsset.url} alt="Guide illustré des raccourcis clavier Windows" loading="eager" width={768} height={768} />
+               <figcaption>Bureautique <span>Maîtriser les raccourcis Windows</span></figcaption>
+             </figure>
           </div>
         </div>
       </section>
